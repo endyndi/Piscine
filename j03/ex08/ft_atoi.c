@@ -6,28 +6,25 @@
 /*   By: elesueur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/20 08:44:18 by elesueur          #+#    #+#             */
-/*   Updated: 2017/03/23 09:01:02 by elesueur         ###   ########.fr       */
+/*   Updated: 2017/03/27 08:30:11 by elesueur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-int ft_atoi(char *str)
+int		ft_atoi(char *str)
 {
-	int i;
-	int nb;
-	char signe;
+	int		i;
+	int		nb;
+	char	signe;
 
+	i = 0;
+	signe = 0;
 	nb = 0;
-	while (str[i] != '/0' && ( str[i] <= 13 || str[i] == ' '))
-	{
+	while (str[i] && ((str[i] <= 13 && str[i] >= 9) || (str[i] == ' ')))
 		i++;
-	}
-	if (signe == '+' || signe == '-')
+	if (str[i] == '+' || str[i] == '-')
 	{
-		if (signe == '-')
-		{
+		if (str[i] == '-')
 			signe = 1;
-		}
 		i++;
 	}
 	while (nb >= '0' && nb <= '9')
@@ -36,13 +33,8 @@ int ft_atoi(char *str)
 		nb += str[i] - '0';
 		i++;
 	}
-	if ( signe == 1)
-	{
+	if (signe == 1)
 		return (-nb);
-	}
 	else
-	{
 		return (nb);
-	}
-
-
+}

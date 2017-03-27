@@ -1,16 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elesueur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/15 17:00:58 by elesueur          #+#    #+#             */
-/*   Updated: 2017/03/23 11:33:30 by elesueur         ###   ########.fr       */
+/*   Created: 2017/03/26 19:11:40 by elesueur          #+#    #+#             */
+/*   Updated: 2017/03/26 19:16:51 by elesueur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_ft(int *********nbr)
+int		ft_str_is_uppercase(char *str)
 {
-	*********nbr = 42;
+	int a;
+
+	a = 0;
+	while (str[a])
+	{
+		if (str[a] >= 65 && str[a] <= 90)
+		{
+			return (1);
+		}
+		if (str[a] <= 65 && str[a] >=90)
+		{
+			return (0);
+		}
+		else
+		{
+			return (1);
+		}
+		a++;
+	}
 }

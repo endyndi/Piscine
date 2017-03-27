@@ -6,7 +6,7 @@
 /*   By: elesueur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/15 17:30:49 by elesueur          #+#    #+#             */
-/*   Updated: 2017/03/23 08:46:32 by elesueur         ###   ########.fr       */
+/*   Updated: 2017/03/23 11:34:27 by elesueur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 	int d;
 
 	*div = a / b;
-	*mod  = a % b;
+	*mod = a % b;
 }

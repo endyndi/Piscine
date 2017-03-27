@@ -1,16 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elesueur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/15 17:00:58 by elesueur          #+#    #+#             */
-/*   Updated: 2017/03/23 11:33:30 by elesueur         ###   ########.fr       */
+/*   Created: 2017/03/23 15:07:27 by elesueur          #+#    #+#             */
+/*   Updated: 2017/03/23 17:37:39 by elesueur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_ft(int *********nbr)
+#include <stdio.h>
+#include <string.h>
+
+char *ft_strupcase(char *str)
 {
-	*********nbr = 42;
+	int  i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if  (str[i] == ' ' ||  str[i] <= 97 || str[i] >= 122 )
+		{
+			i++;
+		}
+		str[i] = str[i] - 32;
+		i++;
+	}
+	return (str);
 }
+
+int		main()
+{
+	int i;
+	i = 0;
+	char str[] = "bon/jo;ur je suis un boloss";
+	printf("le mien: %s", ft_strupcase(str));
+}
+

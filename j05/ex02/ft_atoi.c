@@ -1,16 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elesueur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/15 17:00:58 by elesueur          #+#    #+#             */
-/*   Updated: 2017/03/23 11:33:30 by elesueur         ###   ########.fr       */
+/*   Created: 2017/03/21 17:08:35 by elesueur          #+#    #+#             */
+/*   Updated: 2017/03/21 17:22:54 by elesueur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_ft(int *********nbr)
+#include <unistd.h>
+
+int		ft_atoi(char *str)
 {
-	*********nbr = 42;
-}
+	int i;
+	int nb;
+	char signe;
+	while (str[i] != '/0' || str[i] <= 13 || str[i] == ' ')
+	{
+		i++;
+	}
+	if (signe == '+' || signe == '-')
+	{
+		if (signe == '-')
+		{
+			signe = 1;
+		}
+		i++;
+	}
+	while (nb >= '0' && nb <= '9')
+	{
+		nb = 0;
+		nb *= 10;
+		nb += str[i] - '0';
+		i++;
+	}
+	if (signe == 1)
+	{
+		return (-nb);
+	}
+	else
+	{
+		return (nb);
+	}

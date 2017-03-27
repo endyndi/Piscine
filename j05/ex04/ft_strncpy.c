@@ -1,16 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: elesueur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/15 17:00:58 by elesueur          #+#    #+#             */
-/*   Updated: 2017/03/23 11:33:30 by elesueur         ###   ########.fr       */
+/*   Created: 2017/03/22 09:47:30 by elesueur          #+#    #+#             */
+/*   Updated: 2017/03/23 11:59:54 by elesueur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <string.h>
+#include <stdio.h>
 
-void	ft_ultimate_ft(int *********nbr)
+char strncpy(char desti);
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	*********nbr = 42;
+	int i;
+
+	i = 0;
+	while (i < n && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}
+
+int		main()
+{
+	char dest[]= "Salut Salut Salut";
+	char desti[]="cacapipi";
+	printf("%s", ft_strncpy(desti))
+	printf("%s", strncpy(dest))
 }
