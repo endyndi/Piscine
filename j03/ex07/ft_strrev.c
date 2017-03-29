@@ -6,11 +6,9 @@
 /*   By: elesueur <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/16 11:36:05 by elesueur          #+#    #+#             */
-/*   Updated: 2017/03/27 08:28:20 by elesueur         ###   ########.fr       */
+/*   Updated: 2017/03/27 10:26:13 by elesueur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 char	*ft_strrev(char *str)
 {
